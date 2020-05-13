@@ -7,7 +7,7 @@
     - legal : Send to the browser the legal terms of your site
     - about : Send to the browser the info about your site
     - contact : Send to the browser contact information
-* Ad a link from each page to each other page
+* Add a link from each page to each other page
 * *Bonus* - Have the responses be it's own module with a full html document.
 * *Super Bonus* - Add the same header and footer to every page without copying the code onto each page. *hint - You can use a function or modules*
 
