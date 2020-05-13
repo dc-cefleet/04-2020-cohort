@@ -40,7 +40,7 @@ app.listen(8000, () => console.log(`Listening on port http://localhost:${port}`)
 ```
 
 ### Parameters Matching
-
+```
 const express = require('express');
 const app = express();
 const port = 8000;
@@ -51,3 +51,33 @@ app.get("/jedi/:name", (req,res)=>res.send(`Your Jedi Name is ${req.params.name}
 
 app.get("/jedi/:name/:age", (req, res=>res.send(`You are a jedi named ${req.params.name} and you are ${req.params.age} years old.`)))
 app.listen(8000, () => console.log(`Listening on port http://localhost:${port}`));
+```
+### Code from last excersie 
+```
+const data = require("./data")
+const express = require("express");
+const app = express();
+const port = 8000;
+
+app.get("/cat", (req,res)=>res.send(data.filter(animal=>animal.type =="cat")))
+
+app.get("/dog", (req,res)=>res.send(data.filter(animal=>animal.type =="dog")))
+
+app.get("/:id", (req,res)=>res.send(data.filter(a=>a.id == req.params.id)))
+
+app.get("/", (req,res)=>{
+    let age = req.query.age;
+    let color = req.query.color;
+    let a = [];
+    if(age){
+        a = data.filter(an=>an.age == age);
+    }
+    //using the 'a' from the first filter
+    if(color) {
+        a = a.filter(an=>an.color== color);
+    }
+    res.json(a)
+});
+
+app.listen(port, ()=>console.log(`listening on port http://127.0.0.1:${port}`));
+```
