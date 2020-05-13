@@ -68,9 +68,9 @@ app.get("/:id", (req,res)=>res.send(data.filter(a=>a.id == req.params.id)))
 app.get("/", (req,res)=>{
     let age = req.query.age;
     let color = req.query.color;
-    let a = [];
+    let a = data;//returns all if no filter is applied
     if(age){
-        a = data.filter(an=>an.age == age);
+        a = a.filter(an=>an.age == age);
     }
     //using the 'a' from the first filter
     if(color) {
