@@ -1,33 +1,20 @@
 # Cheat Sheet
 
-## Install VSCode 
-* [Download VS code](https://code.visualstudio.com/Download)
+## Terms
+* *IDE* - Intergrated Development Environment. The Application that developers use to type, review, and run their code.
 
-## Install Chrome
+##Installations
+
+### Install Chrome
 * [Download Google Chrome](https://www.google.com/chrome/)
 
-## Install NVM / Node
+### Install VSCode 
+* [Download VS code](https://code.visualstudio.com/Download)
 
-```curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash```
-
-```export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"```
-
-```nvm install node```
-
-## Install Homebrew for MacOS
-```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
-
-## Install Python3 
-### MacOS 
-*install brew first*
-
-```brew install python3```
-### Linux / Windows WSL
-*Ubuntu 20.04 comes with python3 pre-installed*
-
-```sudo apt install python3```
-
-## Setup WSL with VScode for Windows
+### (Windows Only) Install WSL/Ubuntu and setup with VS code
 *Follow Instructions found in this link*
 
 [Setup VSCode with WSL](https://code.visualstudio.com/remote-tutorials/wsl/getting-started)
+
+### (MacOS Only) Install Iterm2
+* [Download Iterm2](https://iterm2.com/downloads/stable/latest)
